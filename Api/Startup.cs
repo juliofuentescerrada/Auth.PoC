@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Web.Http;
-using Api.Security;
+using Infrastructure.Security;
 using Microsoft.Owin;
 using Microsoft.Owin.Cors;
 using Microsoft.Owin.Security.OAuth;

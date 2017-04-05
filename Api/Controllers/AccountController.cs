@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using System.Web.Http;
-using Api.Identity;
 using Api.Models;
+using Infrastructure.Security.Identity;
 
 namespace Api.Controllers
 {
@@ -20,6 +20,11 @@ namespace Api.Controllers
         [HttpPost]
         public async Task<IHttpActionResult> CreateAccount(CreateAccountModel model)
         {
+            if (model == null)
+            {
+                return BadRequest();
+            }
+
             var userStore = new ApplicationUserStore();
 
             var usermanager = new ApplicationUserManager(userStore);

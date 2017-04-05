@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
 
-namespace Api.Identity
+namespace Infrastructure.Security.Identity
 {
     public class ApplicationUserManager : UserManager<ApplicationUser, int>
     {
